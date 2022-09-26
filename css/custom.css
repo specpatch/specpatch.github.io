@@ -18,6 +18,15 @@ th, td {
 	margin-bottom: 20px;
 }
 
+.abstract {
+    padding-right: 5.5em;
+    padding-left: 3em;
+    margin-top: 1em;
+    transition: .3s ease-in-out;
+    max-height: 30em;
+    overflow: hidden;
+}
+
  /* unvisited link */
 a:link {
   color: #2861ad;
