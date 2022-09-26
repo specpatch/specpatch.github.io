@@ -1,0 +1,154 @@
+
+<html>
+	<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XTFM65VS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1XTFM65VS2');
+</script>
+	<meta charset=“UTF-8”>
+
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,bold,900,600">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <!-- Custom styles for this template -->
+ 		 <link href="css/custom.css" rel="stylesheet">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+ 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+		<title>GhostTalk</title>
+	</head>
+	<body>
+		<div class = "global_container">
+			<div class = "section"  >
+
+				<h1>SpecPatch: Human-in-the-Loop Adversarial Audio Spectrogram Patch Attack on Speech Recognition</h1>
+				<div class ="boxed">
+					<p> we propose SpecPatch, a human-in-the loop adversarial audio attack on automated speech recognition (ASR) systems. Existing audio adversarial attacker assumes that the users cannot notice the adversarial audios, and hence allows the successful delivery
+of the crafted adversarial examples or perturbations. However, in a
+practical attack scenario, the users of intelligent voice-controlled
+systems (e.g., smartwatches, smart speakers, smartphones) have
+constant vigilance for suspicious voice, especially when they are
+delivering their voice commands.
+					</p>
+					<br>
+
+					<p style="font-size:20px; text-align: center"><a href="assets/paper.pdf">Read the Paper</a>,
+					<a href="#bibtex" data-toggle="collapse" role="button">
+					Cite <i class="fa fa-quote-right" aria-hidden="true"></i></a>
+				<div id="bibtex" style="margin-top: 1.5em;" class="collapse" align="left">
+					<pre style="white-space: pre">
+						@inproceedings{guo2022specpatch,
+						  title={SpecPatch: Human-In-The-Loop Adversarial Audio Spectrogram Patch Attack on Speech Recognition},
+						  author={Guo, Hanqing and Wang, Yuanda and Ivanov, Nikolay and Yan, Qiben and Xiao, Li},
+						  booktitle={Proceedings of the 2022  ACM Conference on Computer and Communications Security (CCS)},
+						  year={2022}
+						}
+</pre></p></div>
+	</div>
+
+				<h2>Failure Cases of Existing Adversarial Audio Attack</h2>
+				<div class ="boxed">
+					<img src="assets/Fa.PNG" width="800px" height="180px">
+				</div>
+				<p> <b> User Interference:</b> while the adversary and the user
+pronounce commands concurrently (e.g., the AE says, “call 911”,
+and the user speaks, “set an alarm at 6 am” at stage 1 ), the ASR
+system tends to accept the user’s command rather than the AEs; in
+this case, it will respond with “Alarm has been set”</p>
+				<div class ="boxed">
+					<img src="assets/Fb.PNG" width="800px" height="180px">
+				</div>
+				<div class ="boxed">
+					<img src="assets/Fc.PNG" width="800px" height="180px">
+				</div>
+
+				<h2>Features of GhostTalk</h2>
+
+					<ul>
+						<li class="question">
+							<b> How does GhostTalk work?</b>
+
+								<p class="answer">
+									Since the shared power bank is open to rent for all users, the attackers can rent shared power banks and modify them. After modification, these malicious power banks can compromise smartphone voice assistants, and then <strong class="bold">hack private information, launch ghost call, or steal voice verification codes.</strong>
+												</p>
+					<b>What devices can be compromised by GhostTalk?</b>
+					<p class="answer">
+						New generations of smartphones have discarded 3.5mm headphone jack and integrated the headphone audio functions into the charging port. This innovation revamps the outlook of smartphones, but it imposes new threats to the smartphone audio system when users are charging in public spaces. All the smartphones with Lightning or USB-C charging ports are vulnerable to GhostTalk.
+					</p>
+					<b>What are the key contributions of GhostTalk?</b>
+					<p class="answer">
+						<ul>
+								<li class="answer"> &#9733  GhostTalk can simultaneously achieve two attack goals, i.e., voice injection and eavesdropping</li>
+								<li class="answer">  &#9733 GhostTalk does not require any prior knowledge about the victim's voice, and it can bypass the speaker verification through a backdoor in the charging port</li>
+								<li class="answer"> &#9733  GhostTalk is resilient against strong environmental noises and can bypass liveness detection systems</li>
+						</ul>
+
+					</p>
+
+					<div class ="boxed">
+						<img src="assets/scenarios.jpg" width="800px" height="180px">
+					</div>
+
+					<h2>GhostTalk Sample Audios</h2>
+					<div class ="boxed">
+						<p> These are natural speech audios and injected speech audios via GhostTalk. Can you distinguish them?
+						</p>
+					</div>
+
+					<div style="margin-top=5em;">
+						<h3> Group A </h3>
+						<table>
+						<tr>
+							<td><audio controls>
+									<source src="./assets/01_A.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td>
+							<td><audio controls>
+									<source src="./assets/01_B.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td>
+						</tr>
+					</table>
+					<h3> Group B </h3>
+					<table><div class="centered">
+							<td><audio controls>
+									<source src="./assets/02_A.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td></div>
+							<td><audio controls class="centered">
+									<source src="./assets/02_B.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td>
+					</table>
+
+					<h2>GhostTalk Demo</h2>
+					<div class ="centered">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/YUQqMCGIIik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<h2>GhostTalk-SC Attack</h2>
+					<div class ="boxed">
+						<p>In case when the smartphones are charged by an unaltered standard cable, we discover that it is possible to recover the audio signal from smartphone loudspeakers by monitoring the charging current on the power line.
+						</p>
+						<br>
+						<p>To demonstrate the feasibility, we design GhostTalk-SC (Standard Cable), an adaptive eavesdropper system targeting smartphones charged in public USB ports.  To correctly recognize the private information in the audio, GhostTalk-SC carefully extracts audio spectra and integrates a neural network model to classify spoken digits in the speech. </p>
+		</div>
+		<div class ="centered">
+			<img src="assets/CNN_archi.jpg" width="800px" height="450px">
+		</div>
+			<h2>Countermeasure Recommendations</h2>
+
+					<ul>
+								<li class="answer"> &#9873  Disable the voice assistant activation by headphones.</li>
+								<li class="answer">  &#9873 Add headphone notification. </li>
+								<li class="answer">  &#9873 Stop charging after reaching high percentage battery level. </li>
+					</ul>
+
+	</body>
+</html>
