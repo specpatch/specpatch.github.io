@@ -55,39 +55,52 @@ delivering their voice commands.
 
 				<h2>Failure Cases of Existing Adversarial Audio Attack</h2>
 				<div class ="boxed">
-					<img src="assets/Fa.PNG" width="800px" height="180px">
+					<img src="assets/Fa.PNG" width="500px" height="160px">
 				</div>
 				<p> <b> User Interference:</b> while the adversary and the user
 pronounce commands concurrently (e.g., the AE says, “call 911”,
-and the user speaks, “set an alarm at 6 am” at stage 1 ), the ASR
+and the user speaks, “set an alarm at 6 am” at stage ①), the ASR
 system tends to accept the user’s command rather than the AEs; in
-this case, it will respond with “Alarm has been set”</p>
+this case, it will respond with “Alarm has been set”.</p>
 				<div class ="boxed">
-					<img src="assets/Fb.PNG" width="800px" height="180px">
+					<img src="assets/Fb.PNG" width="500px" height="160px">
 				</div>
+				<p> <b> User Perception:</b> Although the adversary
+might craft imperceptible AEs by encoding the adversary command
+into songs or different speeches, the user is still able to locate the
+source of skeptical sound because of the long duration and repeated
+appearance of common audio adversarial attacks.</p>
+
 				<div class ="boxed">
-					<img src="assets/Fc.PNG" width="800px" height="180px">
+					<img src="assets/Fc.PNG" width="500px" height="160px">
 				</div>
+				<p> <b> User Interaction:</b> the adversary
+launches the attack by playing the “read message” adversarial audio
+at stage ① , followed by the successful response from the ASR
+system reading the message containing a personal verification code
+at stage ② . However, when the user is present, he/she is conscious
+of the abnormal behavior of the ASR device and tries to interact
+with the ASR system by sending a halting command (such as “stop
+reading”) at stage ③ to regain the control. Consequently, the ASR
+system follows the user’s benign command and terminates the
+reading process.</p>
 
-				<h2>Features of GhostTalk</h2>
-
-					<ul>
+				<h2>Features of SpecPatch Attack</h2>
 						<li class="question">
-							<b> How does GhostTalk work?</b>
-
-								<p class="answer">
-									Since the shared power bank is open to rent for all users, the attackers can rent shared power banks and modify them. After modification, these malicious power banks can compromise smartphone voice assistants, and then <strong class="bold">hack private information, launch ghost call, or steal voice verification codes.</strong>
-												</p>
-					<b>What devices can be compromised by GhostTalk?</b>
-					<p class="answer">
-						New generations of smartphones have discarded 3.5mm headphone jack and integrated the headphone audio functions into the charging port. This innovation revamps the outlook of smartphones, but it imposes new threats to the smartphone audio system when users are charging in public spaces. All the smartphones with Lightning or USB-C charging ports are vulnerable to GhostTalk.
-					</p>
-					<b>What are the key contributions of GhostTalk?</b>
+							<b> How does launch the SpecPatch Attack?</b>
+							<div class ="boxed">
+								<img src="assets/demo.png" width="800px" height="300px">
+							</div>
+						<p class="answer">
+							As depicted in above figure (left), the attacker crafts the adversarial spectrogram patch and play it via speaker. While the victim is using the ASR services <strong class="bold"> (e.g., command to smart home, Call someone by Siri, Interact with Google Assistants)</strong>, the interpreted commands is changed to the attacker's intention.
+							In our example (right), the transcribed sentences to changed from "close the window and curtains" to "open the door". In this case, our attack is very dangerous to able to alter/control the smart devices without users' perception.
+						</p>
+					<b>What are the key features of SpecPatch?</b>
 					<p class="answer">
 						<ul>
-								<li class="answer"> &#9733  GhostTalk can simultaneously achieve two attack goals, i.e., voice injection and eavesdropping</li>
-								<li class="answer">  &#9733 GhostTalk does not require any prior knowledge about the victim's voice, and it can bypass the speaker verification through a backdoor in the charging port</li>
-								<li class="answer"> &#9733  GhostTalk is resilient against strong environmental noises and can bypass liveness detection systems</li>
+								<li class="answer"> <b>Robust:</b> SpecPatch is designed to be robust to the environmental changes, and most importantly, it is robust to any benign commands from the users.</li>
+								<li class="answer">  <b>Imperceptible:</b> SpecPatch is imperceptible because it is very short (<500 Millisecond), and is operated on the human insensitive hearing frequency band</li>
+								<li class="answer">  <b>Deny of Service:</b> SpecPatch has especially designed "mute" patches, which can prevent the users from correcting their commands, causing deny of service attack after deliver the melicious commands.</li>
 						</ul>
 
 					</p>
