@@ -30,12 +30,27 @@
 
 				<h1>SpecPatch: Human-in-the-Loop Adversarial Audio Spectrogram Patch Attack on Speech Recognition</h1>
 				<div class ="boxed">
-					<p> we propose SpecPatch, a human-in-the loop adversarial audio attack on automated speech recognition (ASR) systems. Existing audio adversarial attacker assumes that the users cannot notice the adversarial audios, and hence allows the successful delivery
-of the crafted adversarial examples or perturbations. However, in a
-practical attack scenario, the users of intelligent voice-controlled
-systems (e.g., smartwatches, smart speakers, smartphones) have
-constant vigilance for suspicious voice, especially when they are
-delivering their voice commands.
+					<p> We propose SpecPatch, a human-in-the loop adversarial audio attack on automated speech recognition (ASR) systems. Existing audio adversarial attacker assumes that the users cannot notice the adversarial audios, and hence allows the successful delivery
+						of the crafted adversarial examples or perturbations. However, in a
+						practical attack scenario, the users of intelligent voice-controlled
+						systems (e.g., smartwatches, smart speakers, smartphones) have
+						constant vigilance for suspicious voice, especially when they are
+						delivering their voice commands. Once the user is alerted by a suspicious audio, they intend to correct the falsely-recognized commands
+						by interrupting the adversarial audios and giving more powerful
+						voice commands to overshadow the malicious voice. This makes the
+						existing attacks ineffective in the typical scenario when the user’s
+						interaction and the delivery of adversarial audio coincide. To truly
+						enable the imperceptible and robust adversarial attack and handle
+						the possible arrival of user interruption, we design SpecPatch, a
+						practical voice attack that uses a sub-second audio patch signal to
+						deliver an attack command and utilize periodical noises to break
+						down the communication between the user and ASR systems. We
+						analyze the CTC (Connectionist Temporal Classification) loss forwarding and backwarding process and exploit the weakness of CTC
+						to achieve our attack goal. Compared with the existing attacks, we
+						extend the attack impact length (i.e., the length of attack target
+						command) by 287%. Furthermore, we show that our attack achieves
+						100% success rate in both over-the-line and over-the-air scenarios
+						amid user intervention.
 					</p>
 					<br>
 
@@ -55,7 +70,7 @@ delivering their voice commands.
 
 				<h2>Failure Cases of Existing Adversarial Audio Attack</h2>
 				<div class ="boxed">
-					<img src="assets/Fa.PNG" width="500px" height="160px">
+					<img src="assets/Fa.PNG" width="500px" height="180px">
 				</div>
 				<p> <b> User Interference:</b> while the adversary and the user
 pronounce commands concurrently (e.g., the AE says, “call 911”,
@@ -63,7 +78,7 @@ and the user speaks, “set an alarm at 6 am” at stage ①), the ASR
 system tends to accept the user’s command rather than the AEs; in
 this case, it will respond with “Alarm has been set”.</p>
 				<div class ="boxed">
-					<img src="assets/Fb.PNG" width="500px" height="160px">
+					<img src="assets/Fb.PNG" width="500px" height="180px">
 				</div>
 				<p> <b> User Perception:</b> Although the adversary
 might craft imperceptible AEs by encoding the adversary command
@@ -72,7 +87,7 @@ source of skeptical sound because of the long duration and repeated
 appearance of common audio adversarial attacks.</p>
 
 				<div class ="boxed">
-					<img src="assets/Fc.PNG" width="500px" height="160px">
+					<img src="assets/Fc.PNG" width="500px" height="180px">
 				</div>
 				<p> <b> User Interaction:</b> the adversary
 launches the attack by playing the “read message” adversarial audio
@@ -101,7 +116,7 @@ reading process.</p>
 						<ul>
 								<li class="answer"> <b>Robust:</b> SpecPatch is designed to be robust to the environmental changes, and most importantly, it is robust to any benign commands from the users.</li>
 								<li class="answer">  <b>Imperceptible:</b> SpecPatch is imperceptible because it is very short (<500 Millisecond), and is operated on the human insensitive hearing frequency band</li>
-								<li class="answer">  <b>Deny of Service:</b> SpecPatch has especially designed "mute" patches, which can prevent the users from correcting their commands, causing deny of service attack after deliver the melicious commands.</li>
+								<li class="answer">  <b>Denial of service:</b> SpecPatch has especially designed "mute" patches, which can prevent the users from correcting their commands, causing deny of service attack after deliver the melicious commands.</li>
 						</ul>
 
 					</p>
